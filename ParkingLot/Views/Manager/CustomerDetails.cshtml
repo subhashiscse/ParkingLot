@@ -1,0 +1,33 @@
+@model Customer
+
+@{
+    ViewData["Title"] = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2>👤 Customer Details</h2>
+
+    <div class="card shadow-sm p-4">
+
+        <p><strong>Name:</strong> @Model.Name</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Phone:</strong> @Model.PhoneNumber</p>
+        <p><strong>Type:</strong> @Model.CustomerType</p>
+        <p><strong>Address:</strong> @Model.BillingAddressLine</p>
+        <p><strong>City:</strong> @Model.City</p>
+        <p><strong>Postcode:</strong> @Model.Postcode</p>
+        <p>
+            <strong>Status:</strong>
+            @(Model.IsActive ? "Active" : "Inactive")
+        </p>
+
+    </div>
+
+    <a class="btn btn-secondary mt-3"
+       href="@Url.Action("Customer","Manager")">
+        ← Back
+    </a>
+
+</div>

@@ -1,0 +1,108 @@
+@model List<Reservation>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2>📅 Reservations Report (Admin Control)</h2>
+
+    <table class="table table-striped table-bordered mt-3 align-middle">
+
+        <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Garage</th>
+            <th>Vehicle</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Status</th>
+            <th>Cost</th>
+            <th>Update Status</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        @foreach (var r in Model)
+        {
+            <tr>
+
+                <td>@r.ReservationId</td>
+                <td>@r.CustomerName</td>
+                <td>@r.GarageName</td>
+                <td>@(r.VehicleName ?? "N/A")</td>
+
+                <td>@r.StartDateTime.ToString("dd MMM yyyy HH:mm")</td>
+                <td>@r.EndDateTime.ToString("dd MMM yyyy HH:mm")</td>
+
+                <!-- STATUS -->
+                <td>
+                    @if (r.Status == "Confirmed")
+                    {
+                        <span class="badge bg-success">Confirmed</span>
+                    }
+                    else if (r.Status == "Paid")
+                    {
+                        <span class="badge bg-primary">Paid</span>
+                    }
+                    else if (r.Status == "Completed")
+                    {
+                        <span class="badge bg-primary">Completed</span>
+                    }
+                    else if (r.Status == "Cancelled")
+                    {
+                        <span class="badge bg-danger">Cancelled</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">@r.Status</span>
+                    }
+                </td>
+
+                <td>£@r.Cost.ToString("0.00")</td>
+
+                <!-- ⚙️ UPDATE STATUS -->
+                <td>
+
+                    <form asp-action="UpdateReservationStatus"
+                          asp-controller="Manager"
+                          method="post"
+                          class="d-flex gap-2">
+
+                        <input type="hidden" name="id" value="@r.ReservationId" />
+
+                        <select name="status" class="form-select form-select-sm">
+
+                            <option value="Progress" selected="@("Progress" == r.Status)">Progress</option>
+                            <option value="Completed" selected="@("Completed" == r.Status)">Completed</option>
+
+                        </select>
+
+                        <button type="submit" class="btn btn-primary btn-sm">
+                            Update
+                        </button>
+
+                    </form>
+
+                </td>
+
+            </tr>
+        }
+
+        </tbody>
+
+    </table>
+
+    <!-- NAVIGATION -->
+    <div class="text-center mt-4">
+
+        <a class="btn btn-secondary m-1" href="@Url.Action("Index","Reports")">⬅ Dashboard</a>
+        <a class="btn btn-success m-1" href="@Url.Action("Users","Reports")">👤 Users</a>
+        <a class="btn btn-warning m-1" href="@Url.Action("Vehicles","Reports")">🚗 Vehicles</a>
+
+    </div>
+
+</div>

@@ -1,0 +1,61 @@
+@model List<Garage>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <div class="justify-content-between mb-3">
+        <h2>🅿️ Garages</h2>
+
+        <a class="btn btn-success"
+           href="@Url.Action("AddGarage","Garage")">
+            ➕ Add Garage
+        </a>
+    </div>
+
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Postcode</th>
+            <th>Total Spaces</th>
+            <th>Remaining Spaces</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var g in Model)
+        {
+            <tr>
+                <td>@g.Name</td>
+                <td>@g.City</td>
+                <td>@g.Postcode</td>
+                <td>@g.TotalSpaces</td>
+                <td>@g.ReminaingSpaces</td>
+
+                <td class="text-center">
+                    <div class="d-flex justify-content-center gap-2">
+
+                        <a class="btn btn-sm btn-warning"
+                           href="@Url.Action("EditGarage","Garage", new { id = g.GarageId })">
+                            Edit
+                        </a>
+
+                        <a class="btn btn-sm btn-danger"
+                           href="@Url.Action("DeleteGarage","Garage", new { id = g.GarageId })"
+                           onclick="return confirm('Delete this garage?');">
+                            Delete
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+</div>

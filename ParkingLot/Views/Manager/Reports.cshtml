@@ -1,0 +1,70 @@
+@model ReportsViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">📊 Reports Dashboard</h2>
+
+    <!-- STATS CARDS -->
+    <div class="row g-3">
+
+        <div class="col-md-3">
+            <div class="card p-3 text-center shadow">
+                <h6>Total Users</h6>
+                <h3>@Model.TotalUsers</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 text-center shadow">
+                <h6>Total Vehicles</h6>
+                <h3>@Model.TotalVehicles</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 text-center shadow">
+                <h6>Total Reservations</h6>
+                <h3>@Model.TotalBookings</h3>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card p-3 text-center shadow">
+                <h6>Active Reservations</h6>
+                <h3>@Model.ActiveBookings</h3>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 text-center shadow">
+                <h6>Completed Reservations</h6>
+                <h3>@Model.CompletedBookings</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NAVIGATION BUTTONS -->
+    <div class="text-center mt-5">
+
+        <a href="@Url.Action("Bookings", "Reports")"
+           class="btn btn-primary px-4 m-1">
+            📅 View Reservations
+        </a>
+
+        <a href="@Url.Action("Users", "Reports")"
+           class="btn btn-success px-4 m-1">
+            👤 View Users
+        </a>
+
+        <a href="@Url.Action("Vehicles", "Reports")"
+           class="btn btn-warning px-4 m-1">
+            🚗 View Vehicles
+        </a>
+
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+﻿@model List<Vehicle>
+
+@{
+    ViewData["Title"] = "My Vehicles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">🚗 My Vehicles</h2>
+
+<a class="btn btn-primary mb-3"
+   href="@Url.Action("AddVehicle", "Account")">
+    ➕ Add Vehicle
+</a>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-hover shadow-sm">
+
+        <thead class="table-dark">
+        <tr>
+            <th>Reg No</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Colour</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.RegistrationNumber</td>
+                <td>@v.Make</td>
+                <td>@v.VehicleModel</td>
+                <td>@v.Colour</td>
+
+                <td>
+                    <div class="d-flex gap-2">
+
+                        <a class="btn btn-sm btn-warning"
+                           href="@Url.Action("EditVehicle", "Account", new { id = v.VehicleId })">
+                            Edit
+                        </a>
+
+                        <a class="btn btn-sm btn-danger"
+                           href="@Url.Action("DeleteVehicle", "Account", new { id = v.VehicleId })"
+                           onclick="return confirm('Are you sure you want to delete this vehicle?');">
+                            Delete
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+        }
+        </tbody>
+
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        No vehicles found. Please add one.
+    </div>
+}

@@ -1,0 +1,51 @@
+@model Garage
+
+@{
+    ViewData["Title"] = "Edit Garage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">✏️ Edit Garage</h2>
+
+    <div class="card shadow-sm p-4">
+
+        @using (Html.BeginForm("EditGarage", "Garage", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.GarageId)
+
+            <div class="mb-3">
+                <label>Garage Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>City</label>
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Address Line</label>
+                @Html.TextBoxFor(m => m.AddressLine, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Postcode</label>
+                @Html.TextBoxFor(m => m.Postcode, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Total Spaces</label>
+                @Html.TextBoxFor(m => m.TotalSpaces,
+                    new { @class = "form-control", type = "number" })
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Update Garage
+            </button>
+        }
+
+    </div>
+</div>

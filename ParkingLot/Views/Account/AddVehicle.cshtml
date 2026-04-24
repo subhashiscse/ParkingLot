@@ -1,0 +1,68 @@
+﻿@model VehicleViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="auth-container">
+
+    <!-- Header -->
+    <h2>Add Vehicle</h2>
+    <p style="color: #666;">Register your vehicle for parking reservations</p>
+
+    <!-- Success message -->
+    @if (TempData["Success"] != null)
+    {
+        <p class="message" style="color: green;">
+            @TempData["Success"]
+        </p>
+    }
+
+    <!-- Validation summary -->
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @using (Html.BeginForm("AddVehicle", "Account", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <!-- Registration -->
+        <div class="form-group">
+            <label>Registration Number</label>
+            @Html.TextBoxFor(m => m.RegistrationNumber, new { @class = "input-field", placeholder = "ABC-1234" })
+            @Html.ValidationMessageFor(m => m.RegistrationNumber, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Make -->
+        <div class="form-group">
+            <label>Make</label>
+            @Html.TextBoxFor(m => m.Make, new { @class = "input-field", placeholder = "Toyota, BMW..." })
+            @Html.ValidationMessageFor(m => m.Make, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Model -->
+        <div class="form-group">
+            <label>Model</label>
+            @Html.TextBoxFor(m => m.VehicleModel, new { @class = "input-field", placeholder = "Corolla, X5..." })
+            @Html.ValidationMessageFor(m => m.VehicleModel, "", new { @class = "text-danger" })
+        </div>
+
+        <!-- Colour -->
+        <div class="form-group">
+            <label>Colour</label>
+            @Html.TextBoxFor(m => m.Colour, new { @class = "input-field", placeholder = "Black, White..." })
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn">
+            Save Vehicle
+        </button>
+    }
+
+    <!-- Back link -->
+    <div style="margin-top:15px;">
+        <a href="@Url.Action("Vehicles", "Account")" style="color:#4e54c8;">
+            ← Back to Vehicles
+        </a>
+    </div>
+
+</div>

@@ -1,0 +1,74 @@
+@model Garage
+
+@{
+    ViewData["Title"] = "Delete Garage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5 d-flex justify-content-center">
+
+    <div class="card shadow-lg border-0" style="max-width: 600px; width: 100%;">
+
+        <!-- Header -->
+        <div class="card-header bg-danger text-white text-center">
+            <h3 class="mb-0">⚠️ Delete Garage</h3>
+        </div>
+
+        <div class="card-body p-4">
+
+            <h5 class="mb-3 text-center">
+                Are you sure you want to delete this garage?
+            </h5>
+
+            <hr />
+
+            <!-- Garage Details -->
+            <div class="mb-2">
+                <strong>Name:</strong> @Model.Name
+            </div>
+
+            <div class="mb-2">
+                <strong>City:</strong> @Model.City
+            </div>
+
+            <div class="mb-2">
+                <strong>Postcode:</strong> @Model.Postcode
+            </div>
+
+            <div class="mb-3">
+                <strong>Total Spaces:</strong> @Model.TotalSpaces
+            </div>
+
+            <!-- Warning -->
+            <div class="alert alert-warning text-center">
+                This action will <strong>deactivate</strong> the garage and remove it from customer search.
+            </div>
+
+            <!-- Buttons -->
+            <div class="row mt-4">
+
+                <div class="col-6">
+                    @using (Html.BeginForm("DeleteGarageConfirmed", "Garage", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.GarageId)
+
+                        <button type="submit" class="btn btn-danger w-100">
+                            🗑 Delete
+                        </button>
+                    }
+                </div>
+
+                <div class="col-6">
+                    <a href="@Url.Action("Index","Garage")"
+                       class="btn btn-secondary w-100">
+                        Cancel
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

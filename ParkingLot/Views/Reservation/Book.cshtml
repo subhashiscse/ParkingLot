@@ -1,0 +1,76 @@
+@model BookingViewModel
+
+@{
+    ViewData["Title"] = "Book Parking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var now = DateTime.Now.ToString("yyyy-MM-ddTHH:mm");
+}
+
+<div class="container mt-4">
+
+    <h2>🅿️ Book Parking</h2>
+
+    <form asp-action="ConfirmBooking"
+          asp-controller="Reservation"
+          method="post">
+
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" asp-for="GarageId" />
+
+        <!-- 🚗 VEHICLE SELECT -->
+        <div class="form-group mb-3">
+            <label>Select Vehicle</label>
+
+            <select asp-for="VehicleId" class="form-control" required>
+                <option value="">-- Select Vehicle --</option>
+
+                @foreach (var v in Model.Vehicles)
+                {
+                    <option value="@v.VehicleId">
+                        @v.RegistrationNumber - @v.Make @v.VehicleModel
+                    </option>
+                }
+            </select>
+
+            <span asp-validation-for="VehicleId" class="text-danger"></span>
+        </div>
+
+        <!-- ⏱ START TIME -->
+        <div class="form-group mb-3">
+            <label>Start Time</label>
+            <input asp-for="StartDateTime"
+                   type="datetime-local"
+                   class="form-control"
+                   min="@now"
+                   required />
+
+            <span asp-validation-for="StartDateTime" class="text-danger"></span>
+        </div>
+
+        <!-- ⏱ END TIME -->
+        <div class="form-group mb-3">
+            <label>End Time</label>
+            <input asp-for="EndDateTime"
+                   type="datetime-local"
+                   class="form-control"
+                   min="@now"
+                   required />
+
+            <span asp-validation-for="EndDateTime" class="text-danger"></span>
+        </div>
+
+        <!-- 💰 INFO -->
+        <div class="alert alert-info">
+            Estimated cost will be calculated after confirmation.
+        </div>
+
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-success w-100">
+            Confirm Booking
+        </button>
+
+    </form>
+
+</div>

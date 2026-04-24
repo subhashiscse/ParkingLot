@@ -1,0 +1,45 @@
+@model List<Vehicle>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2>🚗 Vehicles Report</h2>
+
+    <table class="table table-bordered mt-3">
+
+        <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Registration</th>
+            <th>Owner</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var v in Model)
+        {
+            <tr>
+                <td>@v.VehicleId</td>
+                <td>@v.VehicleModel</td>
+                <td>@v.RegistrationNumber</td>
+                <td>@v.CustomerName</td>
+            </tr>
+        }
+        </tbody>
+
+    </table>
+
+    <!-- NAVIGATION -->
+    <div class="text-center mt-4">
+
+        <a class="btn btn-secondary m-1" href="@Url.Action("Index","Reports")">⬅ Dashboard</a>
+        <a class="btn btn-primary m-1" href="@Url.Action("Bookings","Reports")">📅 Reservations</a>
+        <a class="btn btn-success m-1" href="@Url.Action("Users","Reports")">👤 Users</a>
+
+    </div>
+
+</div>

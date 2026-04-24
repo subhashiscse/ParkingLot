@@ -1,0 +1,46 @@
+@model Garage
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2>➕ Add Garage</h2>
+
+    <div class="card p-4 shadow-sm">
+
+        @using (Html.BeginForm("AddGarage", "Garage", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label>Name</label>
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>City</label>
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Address Line</label>
+                @Html.TextBoxFor(m => m.AddressLine, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Postcode</label>
+                @Html.TextBoxFor(m => m.Postcode, new { @class = "form-control" })
+            </div>
+
+            <div class="mb-3">
+                <label>Total Spaces</label>
+                @Html.TextBoxFor(m => m.TotalSpaces, new { @class = "form-control", type = "number" })
+            </div>
+
+            <button class="btn btn-success w-100">Save Garage</button>
+        }
+
+    </div>
+</div>

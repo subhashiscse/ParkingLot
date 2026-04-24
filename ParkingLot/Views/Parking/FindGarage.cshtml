@@ -1,0 +1,67 @@
+@model List<Garage>
+
+@{
+    ViewData["Title"] = "Find Garage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2>🅿️ Find Garage</h2>
+
+    <!-- 🔍 SEARCH FORM -->
+    @using (Html.BeginForm("FindGarage", "Parking", FormMethod.Get))
+    {
+        <div class="row mb-3">
+
+            <div class="col-md-8">
+                <input type="text"
+                       name="city"
+                       class="form-control"
+                       placeholder="Search by city (e.g. London)" />
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-primary w-100">
+                    🔍 Search
+                </button>
+            </div>
+
+        </div>
+    }
+    <div class="row">
+
+        @if (Model != null && Model.Any())
+        {
+            foreach (var g in Model)
+            {
+                <div class="col-md-4">
+
+                    <div class="card shadow-sm mb-3 p-3">
+
+                        <h5>@g.Name</h5>
+                        <p>@g.AddressLine</p>
+                        <p><strong>City:</strong> @g.City</p>
+                        <p><strong>Total Spaces:</strong> @g.TotalSpaces</p>
+                        <p><strong>Remaining Spaces:</strong> @g.ReminaingSpaces</p>
+
+                        <a class="btn btn-success w-100"
+                           href="@Url.Action("Book", "Reservation", new { garageId = g.GarageId })">
+                            🅿️ Book Now
+                        </a>
+
+                    </div>
+
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alert alert-warning">
+                No garages found.
+            </div>
+        }
+
+    </div>
+
+</div>

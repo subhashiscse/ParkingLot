@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Garage Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">📍 Central Parking</h2>
+
+<div class="row">
+
+    <!-- LEFT: DETAILS -->
+    <div class="col-md-8">
+
+        <div class="card p-4 mb-4 shadow-sm">
+
+            <p><b>Address:</b> London EC1A</p>
+
+            <p>🅿️ Free Spaces: <b>42 / 120</b></p>
+
+            <hr />
+
+            <h5>Levels</h5>
+            <ul>
+                <li>Level 1: 10 / 40 free</li>
+                <li>Level 2: 5 / 30 free</li>
+                <li>Level 3: 27 / 50 free</li>
+            </ul>
+
+            <hr />
+
+            <h5>Pricing</h5>
+            <p>Peak: £5/hour</p>
+            <p>Off-peak: £3/hour</p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT: ACTION -->
+    <div class="col-md-4">
+
+        <div class="card p-4 shadow-sm text-center">
+
+            <h5>Reserve a Space</h5>
+
+            <p class="text-muted">Secure your spot now</p>
+
+            <a href="@Url.Action("Reserve","Parking")"
+               class="btn btn-success w-100">
+                Reserve Now
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

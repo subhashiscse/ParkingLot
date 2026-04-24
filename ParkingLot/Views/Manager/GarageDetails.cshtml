@@ -1,0 +1,45 @@
+@model Garage
+
+@{
+    ViewData["Title"] = "Garage Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-3">🏢 Garage Details</h2>
+
+    <div class="card shadow-sm p-4">
+
+        <h4>@Model.Name</h4>
+
+        <hr />
+
+        <p><strong>City:</strong> @Model.City</p>
+        <p><strong>Address:</strong> @Model.AddressLine @Model.AddressLine</p>
+        <p><strong>Postcode:</strong> @Model.Postcode</p>
+        <p><strong>Total Spaces:</strong> @Model.TotalSpaces</p>
+        <hr />
+
+        <!-- Actions -->
+        <div class="d-flex gap-2">
+
+            <a class="btn btn-warning"
+               href="@Url.Action("EditGarage","Manager", new { id = Model.GarageId })">
+                ✏️ Edit
+            </a>
+
+            <a class="btn btn-danger"
+               href="@Url.Action("DeleteGarage","Manager", new { id = Model.GarageId })">
+                🗑️ Delete
+            </a>
+
+            <a class="btn btn-secondary"
+               href="@Url.Action("Garages","Manager")">
+                ← Back
+            </a>
+
+        </div>
+
+    </div>
+</div>

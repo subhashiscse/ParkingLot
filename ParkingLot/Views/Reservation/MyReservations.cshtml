@@ -1,0 +1,117 @@
+@model List<Reservation>
+
+@{
+    ViewData["Title"] = "My Reservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .table td {
+        vertical-align: middle;
+    }
+</style>
+
+<div class="container mt-4">
+
+    <h2 class="mb-4">📅 My Reservations</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-info">
+            You have no reservations yet.
+            <a href="@Url.Action("FindGarage", "Reservations")">Find a garage</a>
+        </div>
+    }
+    else
+    {
+        <div class="card shadow-sm p-3">
+
+            <table class="table table-hover align-middle">
+
+                <thead class="table-dark">
+                    <tr>
+                        <th>Garage</th>
+                        <th>Vehicle</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Cost</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                @foreach (var r in Model)
+                {
+                    var duration = (r.EndDateTime - r.StartDateTime).TotalHours;
+
+                    <tr>
+
+                        <!-- 🅿️ GARAGE -->
+                        <td>@r.GarageName</td>
+
+                        <!-- 🚗 VEHICLE -->
+                        <td>@r.VehicleName</td>
+
+                        <!-- ⏱ START -->
+                        <td>@r.StartDateTime.ToString("dd MMM yyyy HH:mm")</td>
+
+                        <!-- ⏱ END -->
+                        <td>@r.EndDateTime.ToString("dd MMM yyyy HH:mm")</td>
+
+                        <!-- ⏱ DURATION -->
+                        <td>@duration.ToString("0.0") hrs</td>
+
+                        <!-- 📌 STATUS -->
+                        <td>
+                            <span>@r.Status</span>
+                        </td>
+
+                        <!-- 💰 COST -->
+                        <td>
+                            <strong>£@r.Cost.ToString("0.00")</strong>
+                        </td>
+
+                        <!-- ⚙️ ACTIONS -->
+                        <td>
+                            <div class="d-flex gap-2">
+
+                                @if (r.Status == "Progress")
+                                {
+                                    <form asp-action="ConfirmPayment"
+                                          asp-controller="Billing"
+                                          method="post"
+                                          onsubmit="return confirm('Proceed to payment?');">
+
+                                        @Html.AntiForgeryToken()
+
+                                        <input type="hidden" name="reservationId" value="@r.ReservationId" />
+
+                                        <button type="submit" class="btn btn-sm btn-success">
+                                            💳 Pay
+                                        </button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <span class="text-muted small">
+                                        No actions available
+                                    </span>
+                                }
+
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+
+                </tbody>
+
+            </table>
+
+        </div>
+    }
+
+</div>

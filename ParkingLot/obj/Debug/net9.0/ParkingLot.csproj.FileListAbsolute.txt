@@ -1,0 +1,9 @@
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.csproj.AssemblyReference.cache
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.GeneratedMSBuildEditorConfig.editorconfig
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.AssemblyInfoInputs.cache
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.AssemblyInfo.cs
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.csproj.CoreCompileInputs.cache
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.MvcApplicationPartsAssemblyInfo.cache
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.RazorAssemblyInfo.cache
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.RazorAssemblyInfo.cs
+/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/obj/Debug/net9.0/ParkingLot.sourcelink.json

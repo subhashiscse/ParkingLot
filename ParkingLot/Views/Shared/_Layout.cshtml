@@ -1,0 +1,125 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ParkingLot</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/auth.css" />
+</head>
+
+<body>
+
+@{
+    var userId = Context.Session.GetInt32("UserId");
+    var email = Context.Session.GetString("UserEmail");
+    var role = Context.Session.GetString("UserRole"); // ✅ FIX ADDED
+}
+
+<!-- ================= NAVBAR ================= -->
+@if (userId != null)
+{
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm mb-3">
+        <div class="container-fluid">
+
+            <!-- BRAND -->
+            <a class="navbar-brand fw-bold" href="@Url.Action("Profile","Account")">
+                🚗 ParkingLot
+            </a>
+
+            <!-- TOGGLE -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+
+                <!-- LEFT MENU -->
+                <ul class="navbar-nav me-auto">
+
+                    <!-- COMMON -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Profile","Account")">Dashboard</a>
+                    </li>
+
+                    <!-- ================= CUSTOMER MENU ================= -->
+                    @if (role == "Customer")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("FindGarage","Parking")">Find Garage</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("MyReservations","Reservation")">Reservations</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Vehicles","Account")">Vehicles</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Statements","Billing")">Statements</a>
+                        </li>
+                    }
+
+                    <!-- ================= ADMIN MENU ================= -->
+                    @if (role == "Admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","Garage")">Manage Garages</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Customer", "Manager")">
+                                Customers
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index","Reports")">Reports</a>
+                        </li>
+                    }
+
+                </ul>
+
+                <!-- RIGHT SIDE -->
+                <div class="d-flex align-items-center gap-3">
+
+                    <span class="text-muted small">
+                        @(email ?? "User")
+                    </span>
+
+                    <a href="@Url.Action("Logout","Account")"
+                       class="btn btn-danger btn-sm">
+                        Logout
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+}
+
+<!-- ================= CONTENT ================= -->
+<div class="container mt-3">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

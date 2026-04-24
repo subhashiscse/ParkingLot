@@ -1,0 +1,193 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ParkingLot
+build_property.RootNamespace = ParkingLot
+build_property.ProjectDir = /Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 6.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/AddVehicle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9BZGRWZWhpY2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9FZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/EditVehicle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9FZGl0VmVoaWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/ReportsVehicles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZXBvcnRzVmVoaWNsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Account/Vehicles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9WZWhpY2xlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Billing/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmlsbGluZy9QYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Billing/StatementDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmlsbGluZy9TdGF0ZW1lbnREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Billing/Statements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmlsbGluZy9TdGF0ZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/AccountList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9BY2NvdW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/AddGarage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9BZGRHYXJhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/CreateCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9DcmVhdGVDdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/Customer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9DdXN0b21lci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/CustomerDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9DdXN0b21lckRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9EYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/DeleteGarage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9EZWxldGVHYXJhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/EditCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9FZGl0Q3VzdG9tZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/EditGarage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9FZGl0R2FyYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/EditPricingRule.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9FZGl0UHJpY2luZ1J1bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/GarageDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9HYXJhZ2VEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/Garages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9HYXJhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/PricingRules.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9QcmljaW5nUnVsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9SZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/ReportsBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9SZXBvcnRzQm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/ReportsUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9SZXBvcnRzVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Manager/ReportsVehicles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWFuYWdlci9SZXBvcnRzVmVoaWNsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Parking/FindGarage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZy9GaW5kR2FyYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Parking/GarageDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZy9HYXJhZ2VEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Parking/Reserve.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFya2luZy9SZXNlcnZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/Cancel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vQ2FuY2VsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/FindGarage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vRmluZEdhcmFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Reservation/MyReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmVzZXJ2YXRpb24vTXlSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/subhashismollick/Projects/Greenwich/ParkingLot/ParkingLot/ParkingLot/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-cbtbn2zayo
